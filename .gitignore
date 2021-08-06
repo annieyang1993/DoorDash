@@ -18,9 +18,6 @@ bundle.js*
 !/log/.keep
 !/tmp/.keep
 
-/bin/webpack
-/bin/webpack-dev-server
-
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
