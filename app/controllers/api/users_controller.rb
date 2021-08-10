@@ -1,8 +1,10 @@
 class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
-
-    if @user.save
+    @olduser = User.find_by(username: @user.username)
+    if @olduser
+      render json: ["Username already exists"], status: 401
+    elsif @user.save
       login(@user)
       render "api/users/show"
     else
