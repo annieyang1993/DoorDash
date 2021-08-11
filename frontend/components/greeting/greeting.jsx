@@ -82,7 +82,7 @@ class GreetingPage extends React.Component {
           <div className="thirdText">Every Flavor Welcome.
             <br/>
             <input className="thirdButton" type="submit" value="Find Restaurants" /></div>
-          <img className="thirdImg" src="/bbt.jpg" />
+          <img className="thirdImg" src="/bbt.png" />
         </div>
 
         <div className="backgroundColor"></div>
