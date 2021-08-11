@@ -21,3 +21,11 @@ export const logout = () => (
   })
 );
 
+///MOVE THIS FUNCTIOn
+export const restaurants = ()=>{
+  return(
+  $.ajax({
+    method: 'GET',
+    url: '/api/restaurants',
+  }))
+}

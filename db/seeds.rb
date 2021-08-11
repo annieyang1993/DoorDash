@@ -25,28 +25,239 @@ u1 = User.create!(
   password: 'password'
 )
 
+# r1 = Restaurant.create!(
+#   name: 'Blue Bottle Coffee',
+#   email: 'bluebottlecoffee@gmail.com',
+#   phone: '000-000-0000',
+#   latitude: 40.74844076172652,
+#   longitude: -73.98216194436645
+# )
+
 r1 = Restaurant.create!(
-  name: 'Blue Bottle Coffee',
-  email: 'bluebottlecoffee@gmail.com',
+  name: 'Wellsisretarded',
+  email: 'academy@gmail.com',
   phone: '000-000-0000',
-  latitude: 40.74844076172652,
-  longitude: -73.98216194436645
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
 )
 
 r2 = Restaurant.create!(
+  name: 'Annie is great!!',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+
+r3 = Restaurant.create!(
+  name: 'wells hates himself',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+
+r4 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+
+r5 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r6 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r7 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r8 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r9 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r10 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r11 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r12 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r13 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r14 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r15 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r16 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r17 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+r18 = Restaurant.create!(
+  name: 'Wells is miserable',
+  email: 'academy@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7409781,
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
+#############################
+r19 = Restaurant.create!(
   name: 'Academy at Coffee Project NY',
   email: 'academy@gmail.com',
   phone: '000-000-0000',
   latitude: 40.7409781,
-  longitude: -73.9493238
+  longitude: -73.9493238,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
 )
 
-r3 = Restaurant.create!(
+r20 = Restaurant.create!(
   name: 'Partners Coffee',
   email: 'partners@gmail.com',
   phone: '000-000-0000',
   latitude: 40.7487167,
-  longitude: -73.9750118
+  longitude: -73.9750118,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
 )
 
 ############ Items for Partners ####################################

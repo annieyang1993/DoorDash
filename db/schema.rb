@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_10_011528) do
+ActiveRecord::Schema.define(version: 2021_08_11_044243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 2021_08_10_011528) do
     t.decimal "longitude", precision: 64, scale: 12, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_level"
+    t.text "description"
+    t.string "img1"
+    t.string "img2"
     t.index ["name", "latitude", "longitude"], name: "index_restaurants_on_name_and_latitude_and_longitude", unique: true
   end
 

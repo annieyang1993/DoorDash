@@ -1,7 +1,10 @@
+import * as APIUtil from '../../util/session_api_util';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import header from './../../../public/5452421.jpg';
 import FooterContainer from '../footer/footer';
+import SimpleMap from './map.jsx'
+import RestaurantListView from './restaurant_list_view.jsx'
 
 //<td class="headerImg"><%=image_tag("/coffeeHeaderImg.png", width: '100%', height: '600', padding: '0', margin: '0-auto', 'object-fit': 'cover')%></td>
 class HomePage extends React.Component {
@@ -24,13 +27,81 @@ class HomePage extends React.Component {
     const location = Object.assign({}, this.state);
     this.props.receiveLocation(location);
   }
+  componentDidMount(){
+   this.props.getAllRestaurants();
+  }
 
+  renderRestaurantList(){
+    var restaurantList = Object.values(this.props.restaurants);
+    console.log(restaurantList);
+    return (
+      <ul className="restaurantContainerList">
+        {restaurantList.map((element, i) => (
+          <div>
+          <li key={i} className="innerContainerList">
+            <div className="images">
+            <img className = "img1" src={element["img1"]}/>
+            <img className="img2" src={element["img2"]} />
+            </div>
+              <div className="cafeName"> 
+              {element["name"]} 
+              </div>
+            <div className= "cafeDescription">
+            {element["description"]}
+              </div>
+            
+          </li>
+            <div className="grayLine"></div>
+          </div>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     return (
       <div className="homePageContainer">
-        HomePage!
-        <Link to="/" className="header-button" onClick={this.props.logout}>Log Out</Link>
+        
+        <div className="homepage-inner-container">
+          <Link to="/" className="header-button" onClick={this.props.logout}>Log Out</Link>
+          <div className="pickup">Pickup </div>
+          <div className="ASAP">ASAP</div>
+          <div className="from">near</div>
+          <form onSubmit={this.handleSubmit} className="location">
+            <label>
+              <input type="text"
+                value={this.props.location}
+                onChange={this.update('address')}
+                className="location-input"
+                placeholder="Enter Location" />
+            </label>
+            <input className="location-submit" type="submit" value="Find" />
+          </form>
+          <img className="logo-home" src="/logo-blue.png" />
+          <div className="cart-outside">
+          <img className="cart-home" src="/cart.png" />
+          </div>
+          <div className="topLineHome"></div>
+
+          <div className="float-container">
+            
+
+            <div className="float-child-2">
+              {this.renderRestaurantList()}
+            </div>
+            <div className="float-child-1">
+              <SimpleMap/>
+            </div>
+          </div>
+            
+          
+
+          
+      
+
+        </div>
+        <FooterContainer />
+        
       </div>
     );
   }
