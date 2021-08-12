@@ -14,6 +14,7 @@ class HomePage extends React.Component {
       address: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    //this.handleClick = this.handleClick.bind(this);
   }
 
   update(field) {
@@ -27,18 +28,25 @@ class HomePage extends React.Component {
     const location = Object.assign({}, this.state);
     this.props.receiveLocation(location);
   }
+
+  handleClick(e){
+    e.preventDefault();
+  }
+
   componentDidMount(){
-   this.props.getAllRestaurants();
+    this.props.getAllRestaurants();
   }
 
   renderRestaurantList(){
+    
     var restaurantList = Object.values(this.props.restaurants);
-    console.log(restaurantList);
+    
     return (
-      <ul className="restaurantContainerList">
+      <ul className="restaurantContainerList"> 
         {restaurantList.map((element, i) => (
           <div>
-          <li key={i} className="innerContainerList">
+            <li key={i} className="innerContainerList" >
+            <Link className = "restaurantLinks" to={`/api/restaurants/${element["id"]}`}>
             <div className="images">
             <img className = "img1" src={element["img1"]}/>
             <img className="img2" src={element["img2"]} />
@@ -49,7 +57,7 @@ class HomePage extends React.Component {
             <div className= "cafeDescription">
             {element["description"]}
               </div>
-            
+            </Link>
           </li>
             <div className="grayLine"></div>
           </div>
@@ -88,19 +96,22 @@ class HomePage extends React.Component {
 
             <div className="float-child-2">
               {this.renderRestaurantList()}
+              
+              
             </div>
             <div className="float-child-1">
               <SimpleMap/>
+              
             </div>
           </div>
-            
+          
           
 
           
-      
+          
 
         </div>
-        <FooterContainer />
+       
         
       </div>
     );

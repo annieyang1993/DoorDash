@@ -13,6 +13,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import HomePageContainer from './homepage/homepage_container';
+import RestaurantPageContainer from './restaurant_page/restaurant_container';
 
 
 const App = () => (
@@ -22,6 +23,8 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/homepage" component={HomePageContainer} />
       <AuthRoute exact path = "/" component={GreetingContainer}/>
+      <Route path="/api/restaurants/" component={RestaurantPageContainer} />
+      
     </Switch>
 
    

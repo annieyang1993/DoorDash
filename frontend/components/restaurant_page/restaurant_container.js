@@ -1,16 +1,21 @@
 import { connect } from 'react-redux';
-
-import { restaurantsList } from '../../actions/restaurant_actions';
 import Restaurant from './restaurant';
+import { oneRestaurant, menu } from '../../actions/restaurant_actions';
 
-const mapStateToProps = ({entities: { restaurants } }) => {
+const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant, menu } }) => {
     return {
-        restaurants: restaurants
+        location: users[location],
+        currentUser: users[session.id],
+        restaurants: restaurants,
+        currentRestaurant: currentRestaurant,
+        restaurantId: currentRestaurant["id"], 
+        menuList: menu
     };
 };
 
 const mapDispatchToProps = dispatch => ({
-    getAllRestaurants: ()=> dispatch(restaurantsList())
+    getCurrentRestaurant: (restaurantId) => dispatch(oneRestaurant(restaurantId)),
+    menu: (restaurantId) =>dispatch(menu(restaurantId))
 });
 
 export default connect(

@@ -6,10 +6,10 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 class SimpleMap extends React.Component {
     static defaultProps = {
         center: {
-            lat: 59.95,
-            lng: 30.33
+            lat: 40.8058557,
+            lng: -73.954049
         },
-        zoom: 11
+        zoom: 13
     };
 
     render() {
@@ -23,8 +23,8 @@ class SimpleMap extends React.Component {
                     defaultZoom={this.props.zoom}
                 >   
                     <AnyReactComponent
-                        lat={59.955413}
-                        lng={30.337844}
+                        lat={40.8058557}
+                        lng={-73.954049}
                         text="My Marker"
                     />
                 </GoogleMapReact>

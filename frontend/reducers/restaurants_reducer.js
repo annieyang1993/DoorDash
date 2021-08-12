@@ -1,5 +1,5 @@
 
-import { RECEIVE_RESTAURANTS } from '../actions/restaurant_actions';
+import { RECEIVE_RESTAURANTS} from '../actions/restaurants_actions';
 
 
 const restaurantsReducer = (state = {}, action) => {

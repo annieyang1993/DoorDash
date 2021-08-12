@@ -6,9 +6,9 @@
     width: 100%;
     position: relative;
     //need to udpate this to better fit larger/smaller screens.
-    height: 850px;
+    height: 95vh;
     z-index: 1002;
-    overflow-y: scroll;
+    //overflow-y: scroll;
 }
 
 .logo-home{
@@ -141,6 +141,13 @@
     //margin-left: -40px;
 }
 
+.innerContainerList:hover{
+
+    background-color: rgba(81, 207, 216, 0.11);
+    transition-delay: 0.13s;
+    //margin-left: -40px;
+}
+
 .float-container{
     width: 100%;
     position: relative;
@@ -161,13 +168,16 @@
 }
 
 .float-child-2{
-    width: 34%;
+    width: 35%;
     max-height: 100%;
     float: left;
     padding: 0;
     //margin-right: -20px; 
     overflow-y: scroll;
     z-index: 1002;  
+    overflow-x: hidden;
+    margin-left: -10px;
+    text-decoration: none;
 }
 
 .grayLine{
@@ -211,6 +221,8 @@
     position: relative;
     float: top;
     z-index: 1002;
+    text-decoration: none;
+     color: black;
 }
 
 .cafeDescription{
@@ -221,4 +233,11 @@
     float: top;
     padding-top: 10px;
     z-index: 1002;
+    text-decoration: none;
+     color: black;
+}
+
+.restaurantLinks{
+    text-decoration: none;
+    color: black;
 }
