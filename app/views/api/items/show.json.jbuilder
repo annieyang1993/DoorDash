@@ -1,4 +1,5 @@
-json.set! @restaurant.id do
-    json.extract! @restaurant, :name, :email, :phone, :latitude, :longitude, :price_level, :description, :img1, :img2
-end
+json.extract! @item, :id, :name, :availability, :restaurant_id, :price, :section, :img, :description, :additional_info
+
+
+
 

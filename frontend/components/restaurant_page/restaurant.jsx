@@ -35,6 +35,25 @@ class RestaurantPage extends React.Component {
         this.props.receiveLocation(location);
     }
 
+    renderEvenBox(count){
+        if (count%2===0){
+            return (<div></div>)
+        } else{
+            return (<li className="evenMenuItem" key={count+1}>
+
+                <div className="evenMenuItemLeft"></div>
+            </li>)
+        }
+    }
+
+    handleClick(id){
+        this.props.getItem(this.props.restaurantId, id);
+        this.props.setModal(true);
+        //console.log(id);
+        //const {currentItem} = this.props;
+
+
+    }
     renderItemList() {
         var menuList = Object.values(this.props.menuList)
         var menuSections = []
@@ -53,10 +72,51 @@ class RestaurantPage extends React.Component {
                 </ul>
 
                 <ul className="menuItems">
-                    {menuList.map((element, i) => (
-                        <li className="menuItem" key={element["name"]}>{element["name"]}</li>
-                    ))}
+                    {menuSections.map((element, i)=>{
+                        var count = 0;
+                        return(
+                        <li className = "section" key={element}>
+                            <br /><div className="sectionTitle">{element}</div>
+                            <ul className = "sectionItems">
+                            {menuList.map((element2, i) => {
+                                
+                                if (element2["section"]===element){
+                                    count+=1;
+                                    return(
+                                    <li className="menuItem" key={element2["name"]} onClick={()=>this.handleClick(element2["id"])}>
+                                        
+                                        <div className="menuItemLeft">{element2["name"]}</div>
+                                        <img className="menuItemRight" src={element2["img"] ? `/partners/${element2["img"]}.png` : 'FillerLogo.png'} />
+                                    </li>)
+                                } else{
+                                    return(<div></div>)
+                                }
+
+                            })}
+                            <div>
+                            {this.renderEvenBox(count)}
+                            </div>
+                                    
+                            </ul> 
+                                <div className="break" />
+                                
+                                
+
+                        </li> 
+                        )
+                            
+
+                         
+
+                    
+                        })}
                 </ul>
+                
+
+
+
+
+                  
 
                 <div className="bottomLineRestaurant"></div>
             </div>

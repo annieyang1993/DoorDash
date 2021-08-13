@@ -156,8 +156,7 @@
 }
 
 .menuItem:hover{
-    border: 1px solid rgba(128, 128, 128, 0.575);
-    box-shadow: 0px 0px 20px gray;
+    border: 1px solid rgba(0, 0, 0, 0.438);
 }
 
 .menuItemRight{
@@ -257,10 +256,8 @@
     opacity: 1;
     filter: alpha(opacity=100) !important;
     background: #fff;
-    z-index: 99999;
-     box-shadow: 0px 0px 40px 30px rgba(128, 128, 128, 0.747);
-    overflow-y: scroll;
-    }
+    z-index: 99999
+}
 
 
 

@@ -4,9 +4,9 @@ class Api::ItemsController < ApplicationController
     render :index
   end
 
-  # def show
-  #   @restaurant = Restaurant.find(params[:id])
-  #   render :show
-  # end
+  def show
+    @item = Item.find(params[:id])
+    render :show
+  end
 end
 

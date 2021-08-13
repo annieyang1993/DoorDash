@@ -14,17 +14,17 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import HomePageContainer from './homepage/homepage_container';
 import RestaurantPageContainer from './restaurant_page/restaurant_container';
-
+import Modal from './restaurant_page/modal';
 
 const App = () => (
   <div>
+    <Modal/>
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/homepage" component={HomePageContainer} />
       <AuthRoute exact path = "/" component={GreetingContainer}/>
-      <Route path="/api/restaurants/" component={RestaurantPageContainer} />
-      
+      <Route path="/api/restaurants/" component={RestaurantPageContainer} />  
     </Switch>
 
    

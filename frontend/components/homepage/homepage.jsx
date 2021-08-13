@@ -97,7 +97,6 @@ class HomePage extends React.Component {
             <div className="float-child-2">
               {this.renderRestaurantList()}
               
-              
             </div>
             <div className="float-child-1">
               <SimpleMap/>

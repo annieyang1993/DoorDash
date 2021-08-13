@@ -241,3 +241,15 @@
     text-decoration: none;
     color: black;
 }
+
+.markers{
+    height: 50px;
+    width: 30px;
+    transform: translate(-50%, -100%)
+}
+
+.markers:hover{
+    height: 70px;
+    width: 40px;
+    transform: translate(-50%, -100%)
+}
