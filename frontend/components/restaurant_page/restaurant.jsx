@@ -86,7 +86,7 @@ class RestaurantPage extends React.Component {
                                     <li className="menuItem" key={element2["name"]} onClick={()=>this.handleClick(element2["id"])}>
                                         
                                         <div className="menuItemLeft">{element2["name"]}</div>
-                                        <img className="menuItemRight" src={element2["img"] ? `/partners/${element2["img"]}.png` : 'FillerLogo.png'} />
+                                        <img className="menuItemRight" src={element2["img"] ? `/Partners/${element2["img"]}.png` : 'FillerLogo.png'} />
                                     </li>)
                                 } else{
                                     return(<div></div>)
