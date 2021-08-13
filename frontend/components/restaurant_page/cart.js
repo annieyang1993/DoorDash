@@ -40,13 +40,19 @@ class Cart extends React.Component {
     //         </div>)
         
     // }
+    handleClick() {
+        this.props.clearCartItems();
+        //this.props.setModal(true);
+        //console.log(id);
+        //const {currentItem} = this.props;
+    }
+    
     render() {
         var total = 0;
         Object.values(this.props.cart).forEach((e)=>{
             total+=e["price"];
         })
         console.log(total);
-        
     
         if (Object.values(this.props.cart).length === 0){
             return (
@@ -55,6 +61,7 @@ class Cart extends React.Component {
                     <div className="emptyText">Your cart is empty
                         <div className="emptyText">Add items to get started</div>
                     </div>
+                    
                 </div>
             );
         } else{
@@ -66,13 +73,19 @@ class Cart extends React.Component {
                <div className="totalCost">Total - ${total}</div></div>
                <ul> {console.log(Object.values(this.props.cart))}
                 {Object.values(this.props.cart).map((element, i)=>(
-                    <li className = "itemsInCart" key={i}>1 x {element["name"]}
-                    <div className = "individualCost"> $ {element["price"]}</div></li>
-                ))}
+                    <li className="itemsInCart" key={i}>
+                        <div className = "itemCartName">  {element["name"]}</div>
+                    <div className = "individualCost"> 1 x $ {element["price"]}</div></li>
 
-                
+               ))}
 
-            </ul></div>)
+                    
+
+            </ul>
+            <div className="filler"></div>
+                <div className="clearCart" onClick={()=>{this.handleClick()}}> Empty cart </div>
+            
+            </div>)
         }
 
     }

@@ -19,7 +19,14 @@
 .checkoutItems{
     position: relative;
     height: 50px;
+    bottom: 5%;
+    margin-right: 5%;
 
+}
+.checkoutItems:hover{
+    position: relative;
+    height: 50px;
+    cursor: pointer;
 }
 
 .cartTitle{
@@ -40,6 +47,29 @@
     border-radius: 10px;
     color: white;
 
+}
+
+.filler{
+    height: 50%;
+}
+
+.clearCart{
+    background-color: rgb(218, 31, 31);
+    height: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 90%;
+    z-index: 99999;
+    position:absolute;
+    top: 90%;
+    margin-right: 5%;
+    width: 22vw;
+
+
+    //height: 50px;
+      
 }
 
 .totalCost{
@@ -74,8 +104,20 @@
     //width: 30px;
     font-weight: bold;
     float: left;
+    position: relative;
+    top: 1%; left: 1%;
     text-decoration: none;
     padding-top: 5px;
     height: 30px;
 }
 
+.itemCartName{
+    width: 80%;
+    float: left;
+    padding-bottom: 5px;
+    //margin-bottom: 5px;
+}
+
+.individualCost{
+    float: right
+}

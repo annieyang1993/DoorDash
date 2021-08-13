@@ -26,7 +26,7 @@ class Modal extends React.Component {
          
         this.props.addItemToCart(item);
      } else if (!(Object.values(this.props.cart)[0]["restaurant_id"]===this.props.restaurantId)){
-         alert("your cart is not empty!");
+         alert("Your cart currently has items from another restaurant. Empty cart first to add items");
      } else{
          this.props.addItemToCart(item);
      }

@@ -128,9 +128,7 @@ class RestaurantPage extends React.Component {
         return (
             <div className="restaurant-container">
                 <Link to="/" className="header-button" onClick={this.props.logout}>Log Out</Link>
-                <div className="pickup">Pickup </div>
-                <div className="ASAP">ASAP</div>
-                <div className="from">near</div>
+                
                 <form onSubmit={this.handleSubmit} className="location">
                     <label>
                         <input type="text"
