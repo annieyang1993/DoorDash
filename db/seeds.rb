@@ -32,6 +32,17 @@ u1 = User.create!(
 #   latitude: 40.74844076172652,
 #   longitude: -73.98216194436645
 # )
+r10 = Restaurant.create!(
+  name: 'Partners Coffee',
+  email: 'partners@gmail.com',
+  phone: '000-000-0000',
+  latitude: 40.7487167,
+  longitude: -73.9750118,
+  img1: '/Partners1.jpeg',
+  img2: '/Partners2.jpeg',
+  price_level: 2,
+  description: "Delicious coffee place"
+)
 
 r1 = Restaurant.create!(
   name: 'Double Dutch Espresso',
@@ -139,17 +150,7 @@ r9 = Restaurant.create!(
   description: "A spacious coffee shop, roaster, and training lab"
 )
 
-r10 = Restaurant.create!(
-  name: 'Partners Coffee',
-  email: 'partners@gmail.com',
-  phone: '000-000-0000',
-  latitude: 40.7487167,
-  longitude: -73.9750118,
-  img1: '/Partners1.jpeg',
-  img2: '/Partners2.jpeg',
-  price_level: 2,
-  description: "Delicious coffee place"
-)
+
 
 ############ Items for Partners ####################################
 r1i1 = Item.create!(
@@ -217,7 +218,7 @@ r1i7 = Item.create!(
   restaurant_id: Restaurant.find_by(name: 'Partners Coffee').id,
   price: 13.50,
   section: 'Partners Kitchen',
-  description: 'Scrambled eggs, blue cheese, crispy rosemary prosciutto with arugula on a ciabatta roll. (All our eggs are from the Farmers Hen and have fresh milk from Battenkill Farm) (No changes allowed - ingredients pre-prepped)',
+  description: 'Scrambled eggs, blue cheese, crispy rosemary prosciutto with arugula on a ciabatta roll. (No changes allowed - ingredients pre-prepped)',
   img: 7
 )
 
@@ -247,7 +248,7 @@ r1i10 = Item.create!(
   restaurant_id: Restaurant.find_by(name: 'Partners Coffee').id,
   price: 11.25,
   section: 'Partners Kitchen',
-  description: 'Scrambled eggs, pork sausage, caramelized onions & provolone on a warm ciabatta roll. (All our eggs are from the Farmers Hen and have fresh milk from Battenkill Farm) (No changes allowed - ingredients pre-prepped)',
+  description: 'Scrambled eggs, pork sausage, caramelized onions & provolone on a warm ciabatta roll. (No changes allowed - ingredients pre-prepped)',
   img: 10
 )
 
@@ -383,3 +384,277 @@ r1i12 = Item.create!(
   section: 'Cold Drinks',
   img: 23
 )
+
+
+##########SEEDING DOUBLE DUTCH ESPRESSO################################
+
+
+
+d1i1 = Item.create!(
+  name: 'Drip',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 3,
+  section: 'Drinks',
+  description: '16oz drip coffee',
+  img: 24
+)
+
+d1i1 = Item.create!(
+  name: 'Iced Drip',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 4,
+  section: 'Drinks',
+  description: '16oz iced drip coffee',
+  img: 25
+)
+
+d1i1 = Item.create!(
+  name: 'Cafe Au Lait',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 3,
+  section: 'Drinks',
+  description: 'Our specialty drip coffee with whole milk',
+  img: 26
+)
+
+
+d1i1 = Item.create!(
+  name: 'Iced Espresso',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 3,
+  section: 'Drinks',
+  description: '5oz iced espresso',
+  img: 27
+)
+
+
+d1i1 = Item.create!(
+  name: 'Iced Mocha',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 5,
+  section: 'Drinks',
+  description: 'Iced Mocha made with our specialty whipped cream and drip coffee',
+  img: 28
+)
+
+
+d1i1 = Item.create!(
+  name: 'Iced Tea',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 3,
+  section: 'Drinks',
+  description: 'Iced tea with choice of green or black tea',
+  img: 29
+)
+
+
+d1i1 = Item.create!(
+  name: 'Mocha',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 4,
+  section: 'Drinks',
+  description: 'Mocha made with our specialty whipped cream',
+  img: 30
+)
+
+d1i1 = Item.create!(
+  name: 'Avocado Toast',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 10,
+  section: 'Toasts',
+  description: 'Fresh avocado on our homemade sourdough toast',
+  img: 31
+)
+
+d1i1 = Item.create!(
+  name: 'Tuna Toast',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 10,
+  description: 'Tuna schmear on our homemade sourdough toast',
+  section: 'Toasts',
+  img: 32
+)
+
+d1i1 = Item.create!(
+  name: 'Caprese Toast',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 12,
+  description: 'Homemade sourdough toast with fresh tomatoes and mozarella',
+  section: 'Toasts',
+  img: 33
+)
+
+d1i1 = Item.create!(
+  name: 'Lemon Ricotta Toast',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 12,
+  description: 'Homemade sourdough toast with fresh lemon and ricotta',
+  section: 'Toasts',
+  img: 34
+)
+
+d1i1 = Item.create!(
+  name: 'Granola Bowl',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 9,
+  description: 'Homemade granola with an assortment of fruits and yogurt',
+  section: 'Bowls',
+  img: 35
+)
+
+d1i1 = Item.create!(
+  name: 'Acai Bowl',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Double Dutch Espresso').id,
+  price: 11,
+  description: 'Fresh Acai with an assortment of other fruits',
+  section: 'Bowls',
+  img: 36
+)
+
+d1i1 = Item.create!(
+  name: 'Rose Latte',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Remi Flower & Coffee').id,
+  price: 6,
+  description: 'Beautiful latte with a sprinkle of rose petals',
+  section: 'Lattes',
+  img: 37
+)
+
+d1i1 = Item.create!(
+  name: 'Matcha Latte',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Remi Flower & Coffee').id,
+  price: 7,
+  description: 'Beautiful latte with fresh matcha',
+  section: 'Lattes',
+  img: 38
+)
+
+d1i1 = Item.create!(
+  name: 'Lavendar Latte',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Remi Flower & Coffee').id,
+  price: 7,
+  description: 'Beautiful latte with fresh lavendar pedals',
+  section: 'Lattes',
+  img: 39
+)
+
+d1i1 = Item.create!(
+  name: 'Raspberry tart',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Remi Flower & Coffee').id,
+  price: 3,
+  description: 'Freshly baked raspberry tart',
+  section: 'Bakery',
+  img: 40
+)
+
+
+d1i1 = Item.create!(
+  name: 'Matcha toast',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Remi Flower & Coffee').id,
+  price: 5,
+  description: 'Freshly baked matcha toast with fresh matcha',
+  section: 'Bakery',
+  img: 41
+)
+
+d1i1 = Item.create!(
+  name: 'Blueberry tart',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Remi Flower & Coffee').id,
+  price: 3,
+  description: 'Freshly baked blueberry tart',
+  section: 'Bakery',
+  img: 42
+)
+
+d1i1 = Item.create!(
+  name: 'Iced Tea',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Bibble & Sip').id,
+  price: 4,
+  section: 'Drinks',
+  description: 'Iced tea with choice of green or black tea',
+  img: 29
+)
+
+
+d1i1 = Item.create!(
+  name: 'Mocha',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Bibble & Sip').id,
+  price: 4,
+  section: 'Drinks',
+  description: 'Mocha made with our specialty whipped cream',
+  img: 30
+)
+
+d1i1 = Item.create!(
+  name: 'Avocado Toast',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Bibble & Sip').id,
+  price: 10,
+  section: 'Toasts',
+  description: 'Fresh avocado on our homemade sourdough toast',
+  img: 31
+)
+
+d1i1 = Item.create!(
+  name: 'Matcha Cream Puff',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Bibble & Sip').id,
+  price: 7,
+  section: 'Pastries',
+  description: 'Freshly baked cream puff with our homemade whipped filling',
+  img: 43
+)
+
+d1i1 = Item.create!(
+  name: 'Pig Pastry',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Bibble & Sip').id,
+  price: 7,
+  section: 'Pastries',
+  description: 'White tea mousse with lychee compote, strawberry cream & matcha almond cake.',
+  img: 44
+)
+
+
+
+r1i3 = Item.create!(
+  name: 'Chipotle Chicken Salad Bowl',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Blue Bottle Coffee').id,
+  price: 12.95,
+  section: 'Kitchen',
+  description: 'Mixed Greens with Avocado, Tomatoes, Cucumbers, Red Onions, Black Beans, Roasted Corn, Roasted Sweet Potatoes, Tossed in a Cilantro Lime Dressing with Chipotle Chicken (No substitutions allowed)',
+  img: 3
+)
+
+r1i4 = Item.create!(
+  name: 'Fresh Fruit Salad Cup',
+  availability: true,
+  restaurant_id: Restaurant.find_by(name: 'Blue Bottle Coffee').id,
+  price: 8.50,
+  section: 'Kitchen',
+  description: 'Strawberries, Blueberries, Grapes, Pineapple with Lime Mint Syrup (Substitutions not allowed)',
+  img: 4
+)
+

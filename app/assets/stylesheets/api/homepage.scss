@@ -19,13 +19,7 @@
     z-index: 1002;
 }
 
-.header-button{
-    width: 100px;
-    position: absolute;
-    top: 1%; left: 3%;
-    transform: translate(-50%);
-    z-index: 1002;
-}
+
 
 .topLineHome{
     width:100%;
@@ -47,9 +41,12 @@
 
 .ASAP{
     position: absolute;
-    top: 1%; left: 10.5%;
+    top: 0.8%; left: 10.5%;
     transform: translate(-50%);
     z-index: 1002;
+    color: rgb(81, 207, 216);
+    font-weight: bold;
+    font-size: 110%;
 }
 
 .from{
@@ -102,7 +99,7 @@
 }
 
 .cart-home{
-    position: relative;
+    position: absolute;
     background-color: rgb(81, 207, 216);
     height: 30px;
     width: 30px;
@@ -111,10 +108,11 @@
     border: 10px;
     z-index: 2;
     z-index: 1002;
+    float: left;
 }
 
 .cart-outside{
-    background-color: rgb(81, 207, 216);
+    //background-color: rgb(81, 207, 216);
     height: 4px;
     width: 20px;
     position: absolute;
@@ -146,6 +144,11 @@
     background-color: rgba(81, 207, 216, 0.11);
     transition-delay: 0.13s;
     //margin-left: -40px;
+}
+
+.innerContainerList:hover ~ .markers{
+    height: 70px;
+    width: 40px;
 }
 
 .float-container{

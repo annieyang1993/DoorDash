@@ -7,18 +7,7 @@ class Modal extends React.Component {
         this.state = {
             address: '',
         };
-        //this.handleSubmit = this.handleSubmit.bind(this);
     }
-
-    // componentDidMount() {
-    //     var urlArray = window.location.href.split("/");
-    //     var restaurantId = urlArray[urlArray.length - 1];
-    //     var itemList = []
-    //     this.props.getCurrentRestaurant(restaurantId).then(() => {
-    //         this.props.menu(restaurantId);
-    //     })
-
-    // }
 
     update(field) {
         return e => this.setState({
@@ -26,48 +15,41 @@ class Modal extends React.Component {
         });
     }
 
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     const location = Object.assign({}, this.state);
-    //     this.props.receiveLocation(location);
-    // }
-
-    // renderEvenBox(count) {
-    //     if (count % 2 === 0) {
-    //         return (<div></div>)
-    //     } else {
-    //         return (<li className="evenMenuItem" key={count + 1}>
-
-    //             <div className="evenMenuItemLeft"></div>
-    //         </li>)
-    //     }
-    // }
-
     handleClick() {
         this.props.setModal(false);
-        //console.log(id);
-        //const {currentItem} = this.props;
 
 
+    }
+
+    addToCart(item){
+     if (Object.values(this.props.cart).length===0){
+         
+        this.props.addItemToCart(item);
+     } else if (!(Object.values(this.props.cart)[0]["restaurant_id"]===this.props.restaurantId)){
+         alert("your cart is not empty!");
+     } else{
+         this.props.addItemToCart(item);
+     }
     }
     
     renderModal(){
         return(
             <div className="ModalView">
-                <div className="exitButton" onClick={()=>this.handleClick()}>
-                    x
-                    
-                    <img src={this.props.currentItem["img"]===null?
+                <img className="exitButton" onClick={()=>this.handleClick()} src="/x.png"/>
+                    <div className="currentItemName">{this.props.currentItem["name"]}</div>
+                <div className="currentItemDescription">{this.props.currentItem["description"]}</div>
+                    <img className = "itemPicture" src={this.props.currentItem["img"]===null?
                         `/FillerLogo.png` :
                     `/Partners/${this.props.currentItem["img"]}.png`}/>
                     
-                </div>
+               <div className = "addToCartTag"
+               onClick={()=>this.addToCart(this.props.currentItem)}>Add to Cart - ${this.props.currentItem["price"]}</div>
             </div>)
         
     }
     render() {
 
-        //console.log(this.props.currentRestaurant);
+        
         return (
             <div className="modal">
                 {this.props.modalStatus["modalStatus"]===true? this.renderModal() : <div></div>}
@@ -79,8 +61,9 @@ class Modal extends React.Component {
 
 import { connect } from 'react-redux';
 import { oneRestaurant, menu, getItem, modalStatus } from '../../actions/restaurant_actions';
+import { addItemToCart, clearCartItems } from '../../actions/cart_actions';
 
-const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant, menu, currentItem, modalStatus } }) => {
+const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant, menu, currentItem, modalStatus, cart } }) => {
     return {
         location: users[location],
         currentUser: users[session.id],
@@ -89,7 +72,8 @@ const mapStateToProps = ({ session, entities: { users, restaurants, currentResta
         restaurantId: currentRestaurant["id"],
         menuList: menu,
         currentItem: currentItem,
-        modalStatus: modalStatus
+        modalStatus: modalStatus,
+        cart: cart
     };
 };
 
@@ -97,7 +81,9 @@ const mapDispatchToProps = dispatch => ({
     getCurrentRestaurant: (restaurantId) => dispatch(oneRestaurant(restaurantId)),
     menu: (restaurantId) => dispatch(menu(restaurantId)),
     getItem: (restaurantId, itemId) => dispatch(getItem(restaurantId, itemId)),
-    setModal: (bool) => dispatch(modalStatus(bool))
+    setModal: (bool) => dispatch(modalStatus(bool)),
+    addItemToCart: (item) => dispatch(addItemToCart(item)),
+    clearCartItems: ()=>dispatch(clearCartItems())
 });
 
 export default connect(

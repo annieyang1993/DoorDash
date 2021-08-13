@@ -8,6 +8,7 @@ import restaurantReducer from './restaurant_reducer'
 import menuReducer from './menu_reducer'
 import itemReducer from './item_reducer'
 import modalReducer from './modal_reducer'
+import cartReducer from './cart_reducer'
 
 export default combineReducers({
   users: usersReducer,
@@ -16,5 +17,7 @@ export default combineReducers({
   currentRestaurant: restaurantReducer,
   menu: menuReducer,
   currentItem: itemReducer,
-  modalStatus: modalReducer 
+  modalStatus: modalReducer,
+  cart: cartReducer
+
 });

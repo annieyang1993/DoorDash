@@ -5,13 +5,14 @@ import { restaurantsList } from '../../actions/restaurants_actions';
 import {oneRestaurant } from '../../actions/restaurant_actions';
 import Homepage from './homepage';
 
-const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant} }) => {
+const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant, cart} }) => {
 
   return {
     location: users[location],
     currentUser: users[session.id],
     restaurants: restaurants,
-    currentRestaurant: currentRestaurant
+    currentRestaurant: currentRestaurant,
+    cart: cart
   };
 };
 

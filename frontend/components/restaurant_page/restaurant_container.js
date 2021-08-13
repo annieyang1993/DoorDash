@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Restaurant from './restaurant';
 import { oneRestaurant, menu, getItem, modalStatus } from '../../actions/restaurant_actions';
-
-const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant, menu, currentItem, modalStatus } }) => {
+import { logout } from '../../actions/session_actions';
+const mapStateToProps = ({ session, entities: { users, restaurants, currentRestaurant, menu, currentItem, modalStatus, cart } }) => {
     return {
         location: users[location],
         currentUser: users[session.id],
@@ -11,7 +11,8 @@ const mapStateToProps = ({ session, entities: { users, restaurants, currentResta
         restaurantId: currentRestaurant["id"], 
         menuList: menu,
         currentItem: currentItem,
-        modalStatus: modalStatus
+        modalStatus: modalStatus,
+        cart: cart
     };
 };
 
@@ -19,7 +20,8 @@ const mapDispatchToProps = dispatch => ({
     getCurrentRestaurant: (restaurantId) => dispatch(oneRestaurant(restaurantId)),
     menu: (restaurantId) =>dispatch(menu(restaurantId)),
     getItem: (restaurantId, itemId) => dispatch(getItem(restaurantId, itemId)),
-    setModal: (bool) => dispatch(modalStatus(bool))
+    setModal: (bool) => dispatch(modalStatus(bool)),
+    logout: () => dispatch(logout())
 });
 
 export default connect(

@@ -86,9 +86,7 @@ class HomePage extends React.Component {
             <input className="location-submit" type="submit" value="Find" />
           </form>
           <img className="logo-home" src="/logo-blue.png" />
-          <div className="cart-outside">
-          <img className="cart-home" src="/cart.png" />
-          </div>
+          <div className="numberofItems">{Object.values(this.props.cart).length === 0 ? <div>Cart</div> : <div>Cart: {Object.values(this.props.cart).length} item(s)</div>}</div>
           <div className="topLineHome"></div>
 
           <div className="float-container">

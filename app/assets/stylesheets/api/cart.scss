@@ -1,0 +1,81 @@
+.emptyCartImg{
+    width: 70%; 
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0.3;
+}
+
+.emptyText{
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    opacity: 0.8;
+
+}
+
+.checkoutItems{
+    position: relative;
+    height: 50px;
+
+}
+
+.cartTitle{
+    padding: 10px;
+    font-size: 120%;
+}
+
+.cartRestaurantName{
+    font-size: 90%;
+    padding: 10px;
+}
+
+.checkOut{
+    background-color: rgb(218, 31, 31);
+    //height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.totalCost{
+    float:right;
+    //padding: 10px;
+}
+
+.itemsInCart{
+    list-style-type: none;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.individualCost{
+    float: right;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.numberofItems{
+    float: right;
+    padding-top: 5px;
+    color: rgb(81, 207, 216);
+    height: 30px;
+    //width: 30px;
+    font-weight: bold;
+    
+}
+
+.header-button{
+    color: rgb(81, 207, 216);
+    //width: 30px;
+    font-weight: bold;
+    float: left;
+    text-decoration: none;
+    padding-top: 5px;
+    height: 30px;
+}
+

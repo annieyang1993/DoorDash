@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Cart from './cart.js';
 
 class RestaurantPage extends React.Component {
     constructor(props) {
@@ -16,10 +17,7 @@ class RestaurantPage extends React.Component {
         var itemList=[]
         this.props.getCurrentRestaurant(restaurantId).then(()=>{
             this.props.menu(restaurantId);
-        })
-        
-        
-        
+        })    
 
     }
 
@@ -51,9 +49,9 @@ class RestaurantPage extends React.Component {
         this.props.setModal(true);
         //console.log(id);
         //const {currentItem} = this.props;
-
-
     }
+
+
     renderItemList() {
         var menuList = Object.values(this.props.menuList)
         var menuSections = []
@@ -85,7 +83,8 @@ class RestaurantPage extends React.Component {
                                     return(
                                     <li className="menuItem" key={element2["name"]} onClick={()=>this.handleClick(element2["id"])}>
                                         
-                                        <div className="menuItemLeft">{element2["name"]}</div>
+                                        <div className="menuItemLeft">{element2["name"]}
+                                        <div className="menuItemDescription">{element2["description"]}</div></div>
                                         <img className="menuItemRight" src={element2["img"] ? `/Partners/${element2["img"]}.png` : 'FillerLogo.png'} />
                                     </li>)
                                 } else{
@@ -143,9 +142,9 @@ class RestaurantPage extends React.Component {
                     <input className="location-submit" type="submit" value="Find" />
                 </form>
                 <img className="logo-home" src="/logo-blue.png" />
-                <div className="cart-outside">
-                    <img className="cart-home" src="/cart.png" />
-                </div>
+                
+                    <div className="numberofItems">{Object.values(this.props.cart).length === 0 ? <div>Cart</div> : <div>Cart: {Object.values(this.props.cart).length} item(s)</div>}</div>
+                
                 <div className="topLineRestaurant"></div>
 
                 <div className="restaurant-and-menu-container">
@@ -157,7 +156,8 @@ class RestaurantPage extends React.Component {
                     <div className="restaurantMenu">{this.renderItemList()}</div>
                 </div>
                 <div className = "restaurantMenuContainer">
-
+                    <Cart/>
+                    
                 </div>
                 </div>
                 
