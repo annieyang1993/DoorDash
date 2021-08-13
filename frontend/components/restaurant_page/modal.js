@@ -59,7 +59,7 @@ class Modal extends React.Component {
                     
                     <img src={this.props.currentItem["img"]===null?
                         `/FillerLogo.png` :
-                    `/partners/${this.props.currentItem["img"]}.png`}/>
+                    `/Partners/${this.props.currentItem["img"]}.png`}/>
                     
                 </div>
             </div>)
